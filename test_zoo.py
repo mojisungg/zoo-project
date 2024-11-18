@@ -10,5 +10,20 @@ class TestZoo(unittest.TestCase):
        
     # Add your additional test cases here.
 
+    def test_1_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(-1), None)
+
+    def test_2_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(12), 50)
+    
+    def test_3_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(20), 100)
+    
+    def test_4_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(60), 150)
+
+    def test_5_ticket_price(self):
+        self.assertEqual(self.zoo.get_ticket_price(61), 100)
+        
 if __name__ == '__main__':
     unittest.main()
